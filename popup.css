@@ -15,7 +15,10 @@ body {
   
   button {
     padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
+    margin: 3px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: orange;
+    border-radius: 1px;
   }
   
