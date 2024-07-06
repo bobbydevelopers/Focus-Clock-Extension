@@ -22,3 +22,14 @@ body {
     border-radius: 1px;
   }
   
+    
+  button:hover{
+    padding: 10px 20px;
+    margin: 3px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: blue;
+    border-radius: 1px;
+    color: aliceblue;
+  }
+  
