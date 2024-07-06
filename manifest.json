@@ -5,7 +5,8 @@
   "description": "A simple productivity timer to help you manage work sessions and breaks.",
   "permissions": ["storage", "activeTab"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": "timer.png"
   },
   "content_scripts": [
     {
