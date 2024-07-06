@@ -1,7 +1,8 @@
 let timer;
-let minutes = 25;
+let minutes = 1;
 let seconds = 0;
 let isRunning = false;
+const song = "assets\sounds\notification.wav";
 
 /**
  * Handles the start/pause functionality of the timer.
@@ -25,7 +26,7 @@ document.getElementById('start').addEventListener('click', () => {
  */
 document.getElementById('reset').addEventListener('click', () => {
   clearInterval(timer);
-  minutes = 25;
+  minutes = 1;
   seconds = 0;
   isRunning = false;
   document.getElementById('minutes').textContent = formatTime(minutes);
@@ -36,8 +37,11 @@ document.getElementById('reset').addEventListener('click', () => {
 function updateTimer() {
   if (seconds === 0) {
     if (minutes === 0) {
-      clearInterval(timer);
-      alert("Time's up!");
+      // clearInterval(timer);
+      createToast("Take a break!", SUCCESS, BOTTOM_LEFT, 3000);
+      speak("Take a break!");
+      // playSound()
+      minutes=5;
       return;
     }
     minutes--;
@@ -54,3 +58,21 @@ function formatTime(time) {
   return time < 10 ? '0' + time : time;
 }
  
+
+function speak(message) {
+  // Create a SpeechSynthesisUtterance
+  const utterance = new SpeechSynthesisUtterance(message);
+
+  // Select a voice
+  const voices = speechSynthesis.getVoices();
+  utterance.voice = voices[5]; // Choose a specific voice
+
+  // Speak the text
+  speechSynthesis.speak(utterance);
+}
+
+// function playSound(){
+//   var oggSource = '<source src="' + song + '" type="audio/wav">';
+//   var embedSource = '<embed hidden="true" autostart="true" loop="false" src="'+song+'">';
+//   document.getElementById("sound").innerHTML='<audio autoplay="autoplay">' + oggSource + embedSource + '</audio>';
+// }
