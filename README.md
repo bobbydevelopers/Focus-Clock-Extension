@@ -2,13 +2,6 @@
 
 FocusClock is a Chrome extension that [brief description of the extension's purpose]. It provides a convenient way to [main functionality] right from your browser.
 
-## Features
-
-- [List the main features of the extension]
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
-
 ## Installation
 
 To install the [Project Name] Chrome extension, follow these steps:
