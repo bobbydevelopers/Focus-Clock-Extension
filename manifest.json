@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Productivity Timer",
+  "version": "1.0",
+  "description": "A simple productivity timer to help you manage work sessions and breaks.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

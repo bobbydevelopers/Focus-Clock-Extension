@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 200px;
+  }
+  
+  #timer {
+    font-size: 48px;
+    margin: 20px 0;
+  }
+  
+  #controls {
+    margin: 20px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+  }
+  
